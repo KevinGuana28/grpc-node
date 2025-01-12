@@ -31,17 +31,9 @@ node server.js
 
 ## Contribution
 
-We appreciate any contributions to improve this project. Please follow our contribution guidelines in our [CONTRIBUTING.md](CONTRIBUTING.md) file.
+kevin Guaña
 
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 
-## Contact
 
-For more information or questions, please contact us through our [email](mailto:your_email@example.com).
-
-
-Puedes copiar y pegar este contenido en un archivo de texto y guardarlo como README.txt.
