@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cliente gRPC API</title>
+</head>
+<body>
+  <h1>Cliente gRPC API</h1>
+  <button onclick="getData()">Obtener Datos</button>
+  
+  <div id="dataContainer">
+    <!-- Aquí se mostrarán los datos obtenidos del servidor -->
+  </div>
+
+  <script>
+    function getData() {
+      fetch('http://localhost:3000/api/data')
+        .then(response => response.json())
+        .then(data => {
+          displayData(data);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+
+    function displayData(data) {
+      const dataContainer = document.getElementById('dataContainer');
+
+      const idElement = document.createElement('p');
+      idElement.textContent = 'ID: ' + data.id;
+
+      const nameElement = document.createElement('p');
+      nameElement.textContent = 'Nombre: ' + data.name;
+
+      const descriptionElement = document.createElement('p');
+      descriptionElement.textContent = 'Descripción: ' + data.description;
+
+      dataContainer.innerHTML = ''; // Borra cualquier contenido previo
+      dataContainer.appendChild(idElement);
+      dataContainer.appendChild(nameElement);
+      dataContainer.appendChild(descriptionElement);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+syntax = "proto3"; //Protocol Buffers.
+
+package data; //ayuda a evitar conflictos de nombres entre diferentes archivos .proto.
+
+service DataService {
+  rpc GetData (Empty) returns (DataResponse);
+}
+/*Define un método RPC llamado GetData en el servicio DataService. 
+Este método toma un mensaje de tipo Empty como entrada y devuelve un mensaje de tipo DataResponse.*/
+
+message Empty {}
+
+message DataResponse {
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+}
